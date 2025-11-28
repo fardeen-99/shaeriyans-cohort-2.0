@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spotlight</title>
+</head>
+<style>
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+
+    :root{
+        --x:600px;
+        --y:600px
+    }
+    html,body{
+        height: 100%;
+        width: 100%;
+/* background: url(https://i.pinimg.com/736x/12/b5/7b/12b57b5d48f9cc915a4b23250426046f.jpg); */
+    }
+    .box{
+        height: 100%;
+        width: 100%;
+        background: radial-gradient(200px at var(--x) var(--y),rgba(255, 255, 255, 0),rgb(0, 0, 0))
+    }
+    video{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        z-index: -1;
+        object-fit: cover;
+    }
+</style>
+<body>
+    <div class="box"></div>
+    <video src="Dhanda Nyoliwala - Tension (Official Music Video).mp4" controls loop autoplay></video>
+    <script src="script.js"></script>
+</body>
+</html>
