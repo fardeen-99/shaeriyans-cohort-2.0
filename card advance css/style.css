@@ -8,6 +8,7 @@ html,body{
     height: 100%;
     width: 100%;
     display: flex;
+    gap: 1.5rem;
     align-items: center;
     justify-content: center;
     background-color: black;
@@ -29,23 +30,33 @@ inherits: false;
 }
 .box{
     width: 200px;
+    height: 320px;
     /* border: 1px solid white; */
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .6rem;
     padding: 10px;
+ 
     border-radius: 10px;
     color: white;
     font-weight: 600;
+    text-transform: uppercase;
     text-align: center;
-    font-size: 1.2rem;
-    box-shadow: 0px 0px 20px purple;
+    /* font-size: 1.2rem; */
+    transition: all 0.3s linear;
+ &:hover{
+    transform: scale(1.1);
+       box-shadow: 0px 0px 30px rgb(228, 120, 58);
+       color: orangered;
     background:linear-gradient(black) content-box 
-    ,conic-gradient(from var(--rotate),rgb(0, 0, 0),rgb(129, 50, 50),black) border-box;
+    ,conic-gradient(from var(--rotate),rgb(0, 0, 0),orangered,black,orangered) border-box;
 animation: rotatechange 10s;
 animation-iteration-count: infinite;
+ }
 }
 .box img{
-height: 100%;
+    filter: drop-shadow(0 0 4px rgb(228, 120, 58));
+height: 60%;
+object-fit: cover;
 width: 100%;
 }
