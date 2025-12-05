@@ -18,9 +18,11 @@ main{
     position: relative;
 }
 nav{
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
+    position: sticky;
+    top: 0;
     padding: 10px;
-    /* width: 100%; */
+    width: 100%;
     /* margin: 10px; */
     border-radius: 10px;
     background-color: rgb(31, 28, 28);
@@ -41,6 +43,7 @@ nav button{
 section{
     /* background-color: purple; */
     width: 100%;
+  
     flex-grow: 1;
     display: flex;
     justify-content: space-between;
@@ -57,7 +60,7 @@ section{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: .4rem;
+    gap: .9rem;
     /* align-items: center; */
     /* justify-content: space-between; */ 
 }
@@ -77,7 +80,8 @@ section{
 }
 .box{
 
-    /* width: 100%; */
+    width: 100%;
+    word-wrap: break-word;
     /* margin: auto; */
     background-color: rgb(46, 56, 56);
     padding: 1rem;
@@ -156,6 +160,12 @@ textarea{
 .aloo{
     visibility: hidden;
 }
+.color{
+    background-color: green !important;
+}
+.color2{
+    background-color: rgb(94, 44, 26) !important;
+}
 .modal{
     /* display:none; */
     position: fixed;
@@ -176,4 +186,24 @@ z-index: 1000;
     height: 100%;
     width: 100%;
     backdrop-filter: blur(10px);
+}
+.btn{
+    display: flex;
+    width: 100%;
+    /* justify-content: space-between; */
+    justify-content: end;
+    gap: .7rem;
+}
+.edit{
+    background-color: rgb(114, 104, 104) !important;
+    padding-inline: 2.5rem !important;
+}
+@media (max-width:700px) {
+    section{
+        flex-direction: column;
+
+    }
+    .cont{
+        min-height: 40vh;
+    }
 }
