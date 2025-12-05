@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <nav>
+            <h1>kanban</h1>
+            <button id="add">
+                add new task
+            </button>
+        </nav>
+<section>
+    <div class="cont" id="todo">
+        <div class="heading">
+            <h3>
+            task
+        </h3>
+        <h3 class="count">
+            1
+        </h3>
+    </div>
+   
+
+     
+            <div draggable="true" class="box">
+                <p>task1</p>
+                <p>task-description</p>
+                <button class="delete">delete</button>
+            </div>
+        
+    
+        
+    </div>
+    <div class="cont" id="progress">
+
+        <div class="heading">
+            <h3>
+                progress
+            </h3>
+        <h3 class="count">
+            0
+        </h3>
+        </div>
+        <div class="task" >
+        </div>
+    </div>
+    
+    <div class="cont"  id="done">
+
+        <div class="heading">
+            <h3>
+            done
+        </h3>
+        <h3 class="count">
+            0
+        </h3>
+    </div>
+    <div class="task">
+    </div>
+</div>
+</section>
+    </main>
+    <div class="aloo">
+
+        <div class="modal">
+    <div class="bg"></div>
+            <div class="boxa">
+                <input type="text" placeholder="task">
+                <textarea  placeholder="task-description" id="" cols="30" rows="5"></textarea>
+                <button id="add-task">ADD-TASK</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
