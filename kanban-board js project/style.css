@@ -26,10 +26,10 @@ nav{
     /* margin: 10px; */
     border-radius: 10px;
     background-color: rgb(31, 28, 28);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: white;
 }
 nav button{
     padding: 1rem 2rem;
@@ -78,18 +78,23 @@ section{
     display: none !important;
     /* visibility: hidden; */
 }
-.box{
-
-    width: 100%;
-    word-wrap: break-word;
-    /* margin: auto; */
-    background-color: rgb(46, 56, 56);
+.box {
     padding: 1rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 14px;
     display: flex;
     flex-direction: column;
     gap: .6rem;
-    border-radius: 1rem;
+    word-wrap: break-word;
+    cursor: grab;
+    /* border: 1px solid rgba(255,255,255,0.08); */
+    box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+    transition: 0.25s ease;
+}
 
+.box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
 }
 .box button{
 align-self: self-end;
@@ -110,50 +115,7 @@ outline: none;
     border: 2px dashed white;
     transition: all 0.3 linear;
 }
-.boxa{
-    width: 30%;
-    background-color: rgb(85, 85, 85);
-    border-radius: 1rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column
-    ;
-    gap: 10px;
-}
-input{
-    padding: .7rem 10px;
-    border-radius: .7rem;
-    outline: none;
-    border: none;
-    /* background-color:antiquewhite; */
-    &::placeholder{
-        /* padding: .7rem .5rem; */
-        /* color: ; */
-        /* padding: 5px; */
-        text-align: center;
-    }    
-}
-textarea{
-    /* background-color:antiquewhite; */
-    border: 1px dashed black;
-    border-radius: .7rem;
-    background-color: hite;
-    border: none;
-    outline: none;
-    padding: 10px;
-    &::placeholder{
-        text-align: center;
-    }
-}
-.boxa button{
-    padding: .7rem 1.5rem;
-    border: none;
-    border-radius: .7rem;
-    background-color: black;
-    color: white;
 
-/* align-self: center; */
-}
 .active{
     visibility: visible;
 }
@@ -166,26 +128,66 @@ textarea{
 .color2{
     background-color: rgb(94, 44, 26) !important;
 }
-.modal{
-    /* display:none; */
+/* MODAL */
+.modal {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* visibility: hidden; */
-    width: 100%;
-    height: 100vh;
-z-index: 1000;
-    display: flex;          /* this is required */
-    align-items: center;     /* vertical center  */
-    justify-content: center; /* horizontal center */
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* visibility: visible; */
 }
-.bg{
-    z-index: -1;
+
+.bg {
     position: absolute;
-    height: 100%;
-    width: 100%;
+    /* inset: 0; */
     backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* ADD TASK BOX */
+.boxa {
+    width: 350px;
+    background: #202020;
+    padding: 1.3rem;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+}
+
+input, textarea {
+    padding: .8rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #2a2a2a;
+    color: white;
+}
+
+textarea {
+    resize: none;
+}
+
+.boxa button {
+    padding: .8rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #333, #111);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    /* transition: 0.3s; */
+}
+
+.boxa button:hover {
+    transform: scale(1.05);
 }
 .btn{
     display: flex;
@@ -197,6 +199,10 @@ z-index: 1000;
 .edit{
     background-color: rgb(114, 104, 104) !important;
     padding-inline: 2.5rem !important;
+}.edit:hover {
+    background: #7a7a7a !important;
+}.delete:hover {
+    background: #ff4343 !important;
 }
 @media (max-width:700px) {
     section{
