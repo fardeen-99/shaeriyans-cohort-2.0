@@ -155,7 +155,14 @@ blocking[`${e.x}-${e.y}`].classList.remove("food")
 
     
     document.addEventListener("keydown",(dets)=>{
-       direction=dets.key
+     if(dets.key==="ArrowLeft"){
+        direction="ArrowLeft"
+     }else if(dets.key==="ArrowRight"){
+        direction="ArrowRight"
+     }else if(dets.key==='ArrowUp'){
+        direction="ArrowUp"
+    }else if(dets.key==="ArrowDown")
+        direction="ArrowDown"
   
     
         
